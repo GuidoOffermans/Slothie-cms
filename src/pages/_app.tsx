@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app';
 import { withTRPC } from '@trpc/next';
 import { AppRouter } from '@backend/routers';
 
+import "../styles/globals.css"
+
 type NextPageWithLayout = NextPage & {
 	getLayout?: (page: ReactElement) => ReactNode;
 };
