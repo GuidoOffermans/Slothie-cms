@@ -1,9 +1,5 @@
-const AdminLayout = ({ children }) => {
-	return (
-		<>
-			{children}
-		</>
-	);
+const AdminLayout = ({ children }: any) => {
+	return <>{children}</>;
 };
 
 export default AdminLayout;
