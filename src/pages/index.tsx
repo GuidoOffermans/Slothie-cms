@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 import AdminLayout from '../components/layouts/AdminLayout';
 
 const Home = () => {
-	const { data, isLoading } = trpc.useQuery(['hello', { text: 'Guido' }]);
+	const { data, isLoading } = trpc.useQuery(['basehello', { text: 'Guido' }]);
 
 	if (isLoading) {
 		return <div>Loading...</div>;

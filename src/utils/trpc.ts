@@ -1,4 +1,9 @@
 import { createReactQueryHooks } from '@trpc/react';
-import { AppRouter } from '@backend/router';
+import type { inferProcedureOutput } from '@trpc/server';
+import { AppRouter } from '@backend/routers';
 
 export const trpc = createReactQueryHooks<AppRouter>();
+
+export type inferQueryOutput<
+	TRouteKey extends keyof AppRouter['_def']['queries'],
+	> = inferProcedureOutput<AppRouter['_def']['queries'][TRouteKey]>;
